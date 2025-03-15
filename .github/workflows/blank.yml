@@ -1,0 +1,2 @@
+- name: tex2pdf
+  uses: KAnggara75/tex2pdf@0.1
