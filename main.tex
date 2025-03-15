@@ -1,0 +1,342 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{packages}
+\usepackage{environments}
+\usepackage{commands}
+
+\begin{document}
+
+
+
+
+
+
+
+
+\section{Полнота и компактность}
+
+\begin{theorem*}[Критерий непрерывности функции]
+X, Y - метрические пространства. Для $f: X \to Y$ эквивалентно:
+\begin{enumerate}
+    \item f непрерывна
+    \item Прообраз любого открытого открыт
+    \item Прообраз любого замкнутого замкнут
+    \item Образ замыкания любого подмножества лежит в замыкании образа этого подмножества: $\forall A \subset X : \ f(\overline{A}) \subset \overline{f(A)}$
+\end{enumerate}
+\end{theorem*}
+
+\begin{claim*}
+Если последовательность сходится в метрическом пространстве, то она является последовательностью Коши 
+\end{claim*}
+
+\begin{definition*}[Полнота]
+Метрическое пространство называют полным, если все последовательности Коши в нем сходятся
+\end{definition*}
+
+\begin{claim*}
+\begin{enumerate}
+    \item Если подпространство полное, то оно замкнутое
+    \item Если подпространство полного пространства замкнуто, то оно полное
+\end{enumerate}
+\end{claim*}
+
+\begin{claim*}[Критерий полноты]
+E - нормированное пространство. Эквивалентно:
+\begin{enumerate}
+    \item E - полное
+    \item Для любой последовательности \( \{x_n\} \subset E \), если ряд из норм \( \sum_{n=1}^\infty \|x_n\| \) сходится в $\mathbb{R}$, то ряд из элементов \( \sum_{n=1}^\infty x_n \) сходится в \( E \)
+    
+\end{enumerate}
+\end{claim*}
+
+\begin{definition*}[Банаховость]
+Нормированное векторное пространство полное по метрике, порожденной нормой, называют банаховым
+\end{definition*}
+
+\begin{definition*}[Гильбертовость]
+Векторное пространство со скалярным произведением полное по метрике, порожденной скалярным произведением, называют гильбертовым
+\end{definition*}
+
+\begin{definition*}[Компактность]
+Метрическое пространство компактно, если из любой последовательности выделяется сходящаяся подпоследовательность
+\end{definition*}
+
+\begin{claim*}
+Из компактности следует полнота
+\end{claim*}
+
+\begin{definition*}[Вполне ограниченность]
+$A \subset X$ вполне ограничено, если $\forall \varepsilon > 0 \ \ \exists \ A_1, \ldots, A_n : A \subset \bigcup_{k=1}^n A_k \ \text{and} \ \Diam{A_k} \le \varepsilon$
+\end{definition*}
+
+\begin{theorem*}[1-й критерий компактности]
+Х - компактно $\iff$ Х - полно и вполне ограничено
+\end{theorem*}
+
+\begin{theorem*}[2-й критерий компактности]
+Х - компактно $\iff$ из любого покрытия Х открытыми множествами выделяется конечное подпокрытие
+\end{theorem*}
+
+\begin{claim*}
+X, Y - метрические пространства, $f : X \to Y$ - непрерывна, X - компактно $\implies$ $f(X)$ - компактно
+\end{claim*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vspace{2cm}
+
+\section{Всюду плотность и сепарабельность}
+
+\begin{definition*}[Всюду плотность]
+X - метрическое пр-во, $A \subset X$. A называют всюду плотным в X, если $\overline{A} = X$
+\end{definition*}
+
+\begin{claim*}[Критерий всюду плотности]
+Эквивалентно:
+\begin{enumerate}
+    \item A всюду плотно в X
+    \item $\forall x \in X \ \forall \varepsilon > 0 \ \exists a \in A : \ d(a, x) < \varepsilon$
+    \item $\forall \ U \subset X$ - открыто, $U \neq \emptyset \implies A \cap U \neq \emptyset$
+\end{enumerate}
+\end{claim*}
+
+\begin{definition*}[Сепарабельность]
+Метрическое пр-во наз-ся сепарабельным, если в нем есть не более чем счетное всюду плотное подмножество
+\end{definition*}
+
+\begin{claim*}[Критерий сепарабельности]
+X - сепарабельно $\iff$
+
+$ \iff \forall \varepsilon > 0 \ \ \exists \{A_n \in X\}_{n \in \mathbb{N}} : \ \Diam{A_n} \le \varepsilon \ \forall n \ \text{and} \ \bigcup A_n = X$
+\end{claim*}
+
+\begin{corollary*}
+\begin{enumerate}
+    \item X - вполне ограничено $\implies$ X - сепарабельно
+    \item X - компактно $\implies$ X - сепарабельно
+    \item X - сепарабельно, $A \subset X$ $\implies$ A - сепарабельно
+\end{enumerate}
+\end{corollary*}
+
+\begin{definition*}[Гильбертово пр-во]
+Гильбертово пр-во - пр-во со скалярным произведением, полное по соответствующей норме ($\|x\| = \sqrt{\langle x, x \rangle}$)
+\end{definition*}
+
+\begin{claim*}
+H - гильбертово. Пусть $\{x_n\}$ - ортогональная последовательность из H. Тогда $\sum x_n$ сх-ся $\iff$ $\sum \|x_n\|^2$ сх-ся. Если ряды сходятся, то $\| \sum x_n \|^2 = \sum \|x_n\|^2$
+\end{claim*}
+
+\begin{claim*}
+$\{e_n\}$ - ортонормированная система в гильбертовом H. Эквивалентно:
+\begin{enumerate}
+    \item $\forall x : \ x = \sum\limits_{n=1}^{\infty} \langle x, e_n \rangle e_n$
+    \item $\forall x : \ x \perp e_n \ \forall n \implies x = 0$
+    \item $\text{Span} \{ e_n : n \in \mathbb{N} \} $ всюду плотно в H (в линейной оболочке берутся все возможные конечные комбинации)
+\end{enumerate}
+\end{claim*}
+
+\begin{definition*}[Ортонормированный базис]
+Ортонормированная система $\{e_n\}$ наз-ся ОНБ, если она удовлетворяет условиям из прошлого утверждения
+\end{definition*}
+
+\begin{theorem*}
+H - бесконечномерное гильбертово пр-во. Тогда эквивалентно:
+\begin{enumerate}
+    \item в H существует ОНБ
+    \item H - сепарабельно
+\end{enumerate}
+\end{theorem*}
+
+\begin{theorem*}[Стоуна-Вейерштрасса]
+X - компакт. $A \subset C(X)$:
+
+1. $\text{const} \ \in A$ и $f, g \in A \implies f + g, fg \in A$
+
+2. $\forall x \neq y \ \exists f \in A : \ f(x) \neq f(y)$
+
+Тогда $\overline{A} = C(X)$
+\end{theorem*}
+
+\begin{corollary*}
+X - компакт $\implies$ $C(X)$ - сепарабельно
+\end{corollary*}
+
+
+
+
+
+
+
+
+
+
+\vspace{2cm}
+
+\section{Линейные операторы в нормированных пр-вах}
+
+\begin{claim*}
+E, F - норм. пр-ва. $u : E \to F$ - линейный оператор. Эквивалентно:
+\begin{enumerate}
+    \item u непрерывен
+    \item u непрерывен в нуле
+    \item $\sup\limits_{x : \|x\|_E \le 1} \|u(x)\|_F < \infty$
+\end{enumerate}
+\end{claim*}
+
+\begin{corollary*}
+$\mathcal{L}(E, F) = \{u:E \to F - \ \text{непрерывный л.о.} \}$ - векторное пространство
+\[
+\|u\| = \sup\limits_{x : \|x\|_E \le 1} \|u(x)\|_F - \ \text{норма на} \ \mathcal{L}(E, F)
+\]
+\end{corollary*}
+
+\begin{claim*}
+Если F полно, то $\mathcal{L}(E, F)$ полно
+\end{claim*}
+
+\begin{theorem*}[Банаха-Штейнгауза]
+E, F - нормированные, E - банахово, $A \subset \mathcal{L}(E, F)$. Эквивалентно:
+\begin{enumerate}
+    \item A ограниченно, то есть $\sup\limits_{u \in A} \|u\| < \infty$
+    \item $\forall x \in E : \ \{ u(x) : u \in A \}$ ограничено в F
+\end{enumerate}
+\end{theorem*}
+
+\begin{corollary*}
+E - банахово , F - нормированное
+$$u_n \in \mathcal{L}(E, F) : \ \forall x \in E \ \ \exists \lim\limits_{n} u_n(x)$$
+$$\text{Тогда} \ \ u(x) = \lim\limits_{n} u_n(x) - \ \text{непрерывный линейный оператор}$$
+\end{corollary*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vspace{2cm}
+
+\section{Теорема о замкнутом графике и другие}
+
+\begin{theorem*}[Бэра]
+X - полное метрическое пространство. $U_n \subset X$ - открытые всюду плотные подмножества. Тогда $\bigcap\limits_{n \in \NN} U_n$ - всюду плотно
+\end{theorem*}
+
+\begin{theorem*}[Банаха об обратном операторе]
+E, F - банаховы. $u : E \to F$ - биективный непрерывный линейный оператор. Тогда $u^{-1}$ - тоже непрерывен
+\end{theorem*}
+
+\begin{definition*}[График отображения]
+$u : E \to F$ - отображение
+$$G_u = \left\{ (x, y) \in E \times F : \ u(x) = y \right\}$$
+\end{definition*}
+
+\begin{theorem*}[О замкнутом графике]
+E, F - банаховы. $u : E \to F$ - л.о. Тогда:
+\[
+G_u - \ \text{замкнут в } E \times F \implies u - \ \text{непрерывен}
+\]
+\end{theorem*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\vspace{2cm}
+
+\section{Теоремы Хана-Банаха и Рисса}
+
+\begin{definition*}
+Линейный функционал - линейный оператор $E \to K$, где $K \in \{\RR, \CC\}$
+
+$\mathcal{L}(E, K) = E'$ - сопряженное пространство
+\end{definition*}
+
+\begin{theorem*}
+E - нормированное пр-во. $f : E \to K$ - линейный функционал. Тогда:
+\[
+f - \ \text{непрерывна} \iff \Ker f - \ \text{замкнуто}
+\]
+\end{theorem*}
+
+\begin{theorem*}
+Все нормы в конечномерных пространствах эквивалентны
+\end{theorem*}
+
+\begin{remark*}
+Эквивалентные нормы сохраняют сходимость посл-ти, фундаментальность посл-ти, открытость множества, непрерывность линейного оператора, полноту пространства
+\end{remark*}
+
+\begin{corollary*}
+E, F - нормированные. E - конечномерно. $u : E \to F$ - л.о. Значит $u$ непрерывен 
+\end{corollary*}
+
+\begin{theorem*}[Хан-Банах]
+E - векторное пр-во. $p : E \to \RR$ такой что:
+\begin{enumerate}
+    \item $p(\alpha x) = |\alpha| \cdot p(x) \ \forall \alpha \in K$
+    \item $p(x + y) \le p(x) + p(y)$
+\end{enumerate}
+$L \subset E$ - подпространство, $f : L \to K$ - л.ф. такой что $|f(x)| \le p(x) \ \forall x \in L$.
+
+Тогда существует $\tilde{f} : E \to K$ - л.ф. такой что:
+\begin{enumerate}
+    \item $|\tilde{f}(x)| \le p(x) \ \forall x \in E$
+    \item $\tilde{f}|_L = f$
+\end{enumerate}
+\end{theorem*}
+
+\begin{corollary*}
+\begin{enumerate}
+    \item E - нормированное, $L \subset E$ - подпространство, $f : L \to K$ - н.л.ф. Тогда существует $\tilde{f} : E \to K$ - н.л.ф. такой что $\|\tilde{f}\| = \|f\|$
+    \item E - нормированное, $x \in E$. Тогда существует $\tilde{f} : E \to K$ - н.л.ф. такой что $\|\tilde{f}\| = 1$ и $\tilde{f}(x) = \|x\|$
+    \item E - нормированное, $L \subset E$ - подпространство. Тогда если $\dim L < \infty$, то существует непрерывный проектор $P : E \to E$ такой что $\Im P = L$
+\end{enumerate}
+\end{corollary*}
+
+\begin{claim*}
+H - гильбертово, $a \in H$
+\[
+\phi_a : H \to K : \ \phi_a(x) = \langle x, a \rangle
+\]
+Тогда $\phi_a$ - н.л.ф. и $\|\phi_a\| = \|a\|$
+\end{claim*}
+
+\begin{theorem*}[Рисса]
+$f : H \to K$ - н.л.ф. Тогда $\exists \ ! \ a \in H$ такое что $f = \phi_a$
+\end{theorem*}
+
+\begin{theorem*}
+H - гильбертово, $L \subset H$ - замкнутое линейное подпространство. Тогда для любого $x \in H : \ \exists \ ! \ p \in L : \ (x-p) \perp L$
+\end{theorem*}
+
+
+
+\end{document}
