@@ -1,0 +1,48 @@
+\ProvidesPackage{commands}
+%%
+%%  Объявление новых команд
+%%
+
+% \newcommand{\имя-команды}{определение команды}
+% Если длинным сложным командам LaTeX надо присвоить имя, это делается с помощью \newcommand. Ниже определяется след оператора
+\newcommand{\tr}{\operatorname{tr}}
+% Если команду надо переопределить используется \renewcommand. В этом есть необходимость, например, для определения мнимой части комплексного числа. Исходная LaTeX команда выдает не общепринятое обозначение
+\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand{\Re}{\operatorname{Re}}
+
+\newcommand{\normxp}{\left\| x \right\|_p}
+\newcommand{\normyq}{\left\| y \right\|_q}
+\newcommand{\normyp}{\left\| y \right\|_p}
+\newcommand{\normzq}{\left\| z \right\|_q}
+\newcommand{\normwq}{\left\| w \right\|_q}
+\newcommand{\normxyp}{\left\| x + y \right\|_p}
+
+\DeclareMathOperator{\CC}{\mathbb C}
+\DeclareMathOperator{\ZZ}{\mathbb Z}
+\DeclareMathOperator{\RR}{\mathbb R}
+\DeclareMathOperator{\NN}{\mathbb N}
+\DeclareMathOperator{\QQ}{\mathbb Q}
+
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rank}{rank}
+
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\identity}{id}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\Ker}{ker}
+\DeclareMathOperator{\Deg}{deg}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Diam}{diam}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\Codim}{codim}
+\DeclareMathOperator{\Dim}{dim}
+\DeclareMathOperator{\RE}{Re}
+\DeclareMathOperator{\Ch}{Ch}
+
+\DeclareMathOperator{\IM}{Im}
+\DeclareMathOperator{\Span}{Span}
+\DeclareMathOperator{\Reg}{Reg}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Inv}{Inv}
+\DeclareMathOperator{\pr}{Pr}
