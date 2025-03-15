@@ -1,0 +1,12 @@
+image: texlive/texlive
+
+stages:
+  - build
+
+build_pdf:
+  stage: build
+  script:
+    - latexmk -pdf -silent main.tex
+  artifacts:
+    paths:
+      - lectures.pdf
